@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YG88</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form class="card" id="transferForm" novalidate>
+
+    <div class="logo">YG88</div>
+
+    <h1 class="title">XỬ LÝ CHUYỂN ĐIỂM</h1>
+
+    <div class="title-line"></div>
+
+    <div class="form-group">
+        <label for="sourceAccount">Tài khoản nguồn</label>
+        <div class="input-wrap">
+            <div class="input-inner">
+                <input id="sourceAccount" type="text" placeholder="Nhập tài khoản nguồn" autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="receiveAccount">Tài khoản nhận</label>
+        <div class="input-wrap">
+            <div class="input-inner">
+                <input id="receiveAccount" type="text" placeholder="Nhập tài khoản nhận" autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="amount">Số điểm cần chuyển</label>
+        <div class="input-wrap">
+            <div class="input-inner">
+                <input id="amount" type="text" placeholder="Nhập số điểm cần chuyển" inputmode="numeric" autocomplete="off">
+            </div>
+        </div>
+    </div>
+
+    <label class="captcha-box">
+        <input id="captcha" type="checkbox">
+        <span class="captcha-text">Tôi không phải là robot</span>
+        <span class="captcha-brand"><b>✓</b>CAPTCHA</span>
+    </label>
+
+    <button class="submit-btn" id="submitBtn" type="submit">XÁC NHẬN CHUYỂN ĐIỂM</button>
+
+    <div class="message" id="message" role="alert" hidden></div>
+
+    <div class="footer">YG88 • Hệ thống xử lý chuyển điểm</div>
+
+</form>
+
+<dialog class="modal" id="resultModal" aria-labelledby="resultTitle">
+    <div class="modal-body">
+
+        <div class="modal-logo">YG88</div>
+
+        <div class="result-icon" id="resultIcon"></div>
+
+        <h2 id="resultTitle"></h2>
+
+        <p id="resultDescription"></p>
+
+        <div class="modal-info">
+            <div><strong>Tài khoản nguồn:</strong> <span id="modalSource"></span></div>
+            <div><strong>Tài khoản nhận:</strong> <span id="modalReceive"></span></div>
+            <div><strong>Số điểm:</strong> <span id="modalAmount"></span></div>
+        </div>
+
+        <button class="close-btn" id="closeModal" type="button">ĐÓNG</button>
+
+    </div>
+</dialog>
+
+<aside class="test-panel">
+
+    <div class="test-header">
+        <div class="test-title">ĐIỀU KHIỂN KẾT QUẢ</div>
+        <div class="test-badge">TEST MODE</div>
+    </div>
+
+    <div class="current-account">
+        <div class="current-label">TÀI KHOẢN ĐANG TEST</div>
+        <div class="current-name empty" id="currentAccount">Chưa nhập tài khoản nhận</div>
+    </div>
+
+    <div class="status-options">
+        <button class="status-option success" type="button" data-status="success" aria-pressed="false">
+            <span class="status-radio"></span>
+            <span class="status-text">CHUYỂN THÀNH CÔNG</span>
+        </button>
+        <button class="status-option failed" type="button" data-status="failed" aria-pressed="false">
+            <span class="status-radio"></span>
+            <span class="status-text">CHUYỂN THẤT BẠI</span>
+        </button>
+    </div>
+
+    <div class="test-info">Trạng thái được lưu riêng theo từng tài khoản nhận trên trình duyệt này.</div>
+
+</aside>
+
+<script src="script.js"></script>
+</body>
+</html>
